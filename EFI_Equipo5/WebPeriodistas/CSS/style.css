@@ -1,0 +1,98 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /* Fondo completo sin franjas blancas */
+    body {
+    background-image: url('../IMG/fondo.png');
+    background-size: 100%; /* Amplía la imagen para ocultar bordes blancos */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    }
+
+    /* Estilos generales del nav */
+    nav.futbol-nav {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+    }
+
+    /* Logo */
+    nav.futbol-nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    }
+
+    .logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    }
+
+    /* Lista de ítems */
+    nav.futbol-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    }
+
+    /* Ítems con imagen y etiqueta */
+    nav.futbol-nav li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    }
+
+    /* Imágenes del menú */
+    nav.futbol-nav li img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    }
+
+    /* Hover sobre imagen */
+    nav.futbol-nav li a:hover img {
+    transform: scale(1.1);
+    }
+
+    /* Etiqueta oculta por defecto */
+    .etiqueta {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ff6600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+
+    /* Mostrar etiqueta al hacer hover */
+    nav.futbol-nav li a:hover .etiqueta {
+    opacity: 1;
+    }
+
+    /* Responsive para móviles */
+    @media (max-width: 768px) {
+    nav.futbol-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.futbol-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}

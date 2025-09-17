@@ -1,30 +1,48 @@
-import { Link } from 'react-router-dom';
-import logo from '../assets/IMG/logo.png';
-import inicioIcon from '../assets/IMG/inicio.png';
-import noticiasIcon from '../assets/IMG/noticias.png';
-import plantelIcon from '../assets/IMG/plantel.png';
-import fixtureIcon from '../assets/IMG/fixture.png';
-import sorteoIcon from '../assets/IMG/sorteo.png';
-import tiendaIcon from '../assets/IMG/tienda.png';
+import { useNavigate } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
-function Navbar() {
+function NavBar() {
+    const navigate = useNavigate();
+
     return (
-        <nav className="futbol-nav">
-        <div className="logo">
-            <img src={logo} alt="Logo" className="logo-img" />
-            <span>Periodistas FC</span>
-        </div>
-        <ul>
-            <li><Link to="/"><img src={inicioIcon} alt="Inicio" /><span className="etiqueta">Inicio</span></Link></li>
-            <li><Link to="/noticias"><img src={noticiasIcon} alt="Noticias" /><span className="etiqueta">Noticias</span></Link></li>
-            <li><Link to="/plantel"><img src={plantelIcon} alt="Plantel" /><span className="etiqueta">Plantel</span></Link></li>
-            <li><Link to="/fixture"><img src={fixtureIcon} alt="Fixture" /><span className="etiqueta">Fixture</span></Link></li>
-            <li><Link to="/sorteo"><img src={sorteoIcon} alt="Sorteo" /><span className="etiqueta">Sorteo</span></Link></li>
-            <li><Link to="/tienda"><img src={tiendaIcon} alt="Tienda" /><span className="etiqueta">Tienda</span></Link></li>
-        </ul>
-        </nav>
+        <Navbar className="barra p-3">        
+            <Container>
+                <Navbar.Brand onClick={()=> navigate('/')} style={{ cursor: "pointer" }}>
+                    <img src='/src/assets/IMG/logo.png' className='icon align-top'/>
+                    <label htmlFor="inicio" className='nav-link text-white'> Periodistas FC </label>
+                </Navbar.Brand>
+
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className='ms-auto d-flex'>
+                        <Nav.Link onClick={()=> navigate('/')}><img src='/src/assets/IMG/inicio.png' className='icon'/>
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Inicio </label>
+                        </Nav.Link>
+                        <Nav.Link onClick={()=> navigate('/noticias')}><img src='/src/assets/IMG/noticias.png' className='icon'/> 
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Noticias </label> 
+                        </Nav.Link>
+                        <Nav.Link onClick={()=> navigate('/plantel')}><img src='/src/assets/IMG/plantel.png' className='icon'/> 
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Plantel </label>
+                        </Nav.Link>
+                        <Nav.Link onClick={()=> navigate('/fixture')}><img src='/src/assets/IMG/fixture.png' className='icon'/> 
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Fixture</label> 
+                        </Nav.Link>
+                        <Nav.Link onClick={()=> navigate('/sorteo')}><img src='/src/assets/IMG/sorteo.png'  className='icon' /> 
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Sorteo </label> 
+                        </Nav.Link>
+                        <Nav.Link onClick={()=> navigate('/tienda')}><img src='/src/assets/IMG/tienda.png' className='icon'/> 
+                            <label htmlFor="inicio" className='nav-link d-flex justify-content-center text-white'> Tienda </label> 
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     );
 }
 
-export default Navbar;
+export default NavBar;

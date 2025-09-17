@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import slide1 from '../assets/IMG/plantel_foto.png';
 import slide2 from '../assets/IMG/partido_foto.png';
 import slide3 from '../assets/IMG/hinchas.png';
@@ -6,25 +6,33 @@ import slide3 from '../assets/IMG/hinchas.png';
 const images = [slide1, slide2, slide3];
 
 function Carrusel() {
-    const [current, setCurrent] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-        setCurrent(prev => (prev + 1) % images.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
-        <section className="carrusel">
-        {images.map((img, i) => (
-            <div key={i} className={`slide ${i === current ? 'active' : ''}`}>
-            <img src={img} alt={`Slide ${i + 1}`} />
-            </div>
-        ))}
-        <button className="prev" onClick={() => setCurrent((current - 1 + images.length) % images.length)}>‹</button>
-        <button className="next" onClick={() => setCurrent((current + 1) % images.length)}>›</button>
-        </section>
+  return (
+    <Carousel className="carru">
+      <Carousel.Item>
+        <img className='d-block w-100' src={slide1} />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className='d-block w-100' src={slide2} />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img className='d-block w-100' src={slide3} />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
     );
 }
 

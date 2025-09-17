@@ -9,7 +9,7 @@ function NavBar() {
 
     return (
         <Navbar className="barra p-3">        
-            <Container>
+            
                 <Navbar.Brand onClick={()=> navigate('/')} style={{ cursor: "pointer" }}>
                     <img src='/src/assets/IMG/logo.png' className='icon align-top'/>
                     <label htmlFor="inicio" className='nav-link text-white'> Periodistas FC </label>
@@ -39,7 +39,7 @@ function NavBar() {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
+            
         </Navbar>
 
     );

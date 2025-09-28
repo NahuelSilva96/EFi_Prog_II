@@ -6,6 +6,8 @@ import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import Tienda from './pages/Tienda';
 import './styles/main.css';
+import 'primeicons/primeicons.css';
+        
 
 function App() {
   return (
@@ -14,10 +16,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/noticias" element={<Noticias />} />
+          {/*<Route path="/noticias" element={<Noticias />} />
           <Route path="/plantel" element={<Plantel />} />
           <Route path="/fixture" element={<Fixture />} />
-          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/tienda" element={<Tienda />} />*/}
         </Routes>
       </Router>
     </div>

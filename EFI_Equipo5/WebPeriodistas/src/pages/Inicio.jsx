@@ -1,6 +1,7 @@
 function Inicio() {
   return (
     <div>
+        
     </div>
   );
 }

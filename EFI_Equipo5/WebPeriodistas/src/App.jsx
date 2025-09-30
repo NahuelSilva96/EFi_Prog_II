@@ -6,7 +6,6 @@ import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import Tienda from './pages/Tienda';
 import './styles/main.css';
-import 'primeicons/primeicons.css';
         
 
 function App() {
@@ -14,6 +13,7 @@ function App() {
     <div className="fondo">
       <Router>
         <Navbar />
+        <div style={{ height: "160px" }}></div> 
         <Routes>
           <Route path="/" element={<Inicio />} />
           {/*<Route path="/noticias" element={<Noticias />} />

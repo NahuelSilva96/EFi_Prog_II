@@ -23,9 +23,9 @@ function Navbar() {
             </ul>
           </section>
           <div className='users-links'>
-            <a><i className="pi pi-id-card"/><span>Hacete Socio</span></a>
-            <a><i className="pi pi-user"/>Socios </a>
-            <a><i className="pi pi-shopping-bag"/>Tienda</a>
+            <a><i className="pi pi-id-card" style={{ marginRight: "8px"}}/><span>Hacete Socio</span></a>
+            <a><i className="pi pi-user" style={{ marginRight: "8px"}}/>Socios </a>
+            <a><i className="pi pi-shopping-bag" style={{ marginRight: "8px"}}/>Tienda</a>
           </div>
         </nav>
     );

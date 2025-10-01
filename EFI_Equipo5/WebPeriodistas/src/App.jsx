@@ -13,7 +13,6 @@ function App() {
     <div className="fondo">
       <Router>
         <Navbar />
-        <div style={{ height: "160px" }}></div> 
         <Routes>
           <Route path="/" element={<Inicio />} />
           {/*<Route path="/noticias" element={<Noticias />} />

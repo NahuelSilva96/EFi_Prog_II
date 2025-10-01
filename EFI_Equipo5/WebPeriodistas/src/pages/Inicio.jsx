@@ -1,9 +1,10 @@
+import Carrusel from '../components/Carrusel';
+
 function Inicio() {
   return (
-    <div>
-        <h1>contenido del inicio</h1>
-    </div>
+  <div>
+    <Carrusel />
+  </div>
   );
 }
-
 export default Inicio;

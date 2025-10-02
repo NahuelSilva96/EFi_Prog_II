@@ -10,7 +10,7 @@ function Navbar() {
           <section className='nav-left'>
             <article className='logo'>
               <img 
-              src='/src/assets/IMG/logo.png'
+              src='/src/assets/IMG/logot.png'
               alt='periodistas'
               className='logo-nav'
               onClick={ () => navigate("/")} />

@@ -13,7 +13,7 @@ function Carrusel() {
       alt={item.alt}
       style={{
         width: '100%',
-        height: '900px',
+        height: '100vh',
         objectFit: 'cover',
         display: 'block',
       }}

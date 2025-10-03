@@ -1,4 +1,6 @@
 import Carrusel from '../components/Carrusel';
+import CarruselNoticias from '../components/NoticiasCarru';
+import TablaPosiciones from '../components/TablaPosiciones';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 
@@ -12,34 +14,36 @@ function Inicio() {
     <section className='overlay'>
       
       <article className='izquierda'>
-        <Card title='Tabla de Posiciones' className='primecard'>
-          <p>Tabla de Posiciones</p>
-          <Button label="Ver más" icon="pi pi-search" />
-        </Card>
-
-        <Card title="Daily Check" className="primercard">
-          <p>Registro diario de actividades o check.</p>
-          <Button label="Completar" icon="pi pi-check" />
-        </Card>
+        <div className="cards-container">
+          <TablaPosiciones />
+          <Card title="Daily Check" className="primercard">
+            <p>Registro diario de actividades o check.</p>
+            <Button label="Completar" icon="pi pi-check" />
+          </Card>
+        </div>
       
       </article>
 
-      <div className="derecha">
-        <div className="redes-container">
-      <div className="social-media">
-        <i className="pi pi-instagram"></i>
-      </div>
-      <div className="social-media">
-        <i className="pi pi-twitter"></i>
-      </div>
-      <div className="social-media">
-        <i className="pi pi-youtube"></i>
-      </div>
-      <div className="social-media">
-        <i className="pi pi-facebook"></i>
-      </div>
-    </div>
-      </div>
+      <section className="derecha">
+        <article className="redes-container">
+          <div className="social-media">
+            <i className="pi pi-instagram"></i>
+          </div>
+          <div className="social-media">
+            <i className="pi pi-twitter"></i>
+          </div>
+          <div className="social-media">
+            <i className="pi pi-youtube"></i>
+          </div>
+          <div className="social-media">
+            <i className="pi pi-facebook"></i>
+          </div>
+        </article>
+      </section>
+    </section>
+      
+    <section className='noticias-carru'>
+      <CarruselNoticias />
     </section>
   </article>
   );

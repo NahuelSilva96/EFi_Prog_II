@@ -2,9 +2,9 @@ import { Carousel } from 'primereact/carousel';
 
 function Carrusel() {
   const images = [
-    { src: '/carru1.jpeg', alt: 'Jugador 1' },
-    { src: '/carru2.jpeg', alt: 'Jugador 2' },
-    { src: '/carru3.jpeg', alt: 'Técnico' },
+    { src: '/img/carru1.jpeg', alt: 'Jugador 1' },
+    { src: '/img/carru2.jpeg', alt: 'Jugador 2' },
+    { src: '/img/carru3.jpeg', alt: 'Técnico' },
   ];
 
   const carruselTemplate = (item) => (

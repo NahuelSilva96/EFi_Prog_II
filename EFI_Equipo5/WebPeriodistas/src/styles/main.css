@@ -8,7 +8,6 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
 }
 
 html, body, #root {
@@ -16,5 +15,6 @@ html, body, #root {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: #5e5a5a;
 }
 

@@ -15,7 +15,9 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    color: wheat;
+    color: rgb(231, 225, 212);
+    font-size: 25px;
+    
 }
 
 .nav-left {

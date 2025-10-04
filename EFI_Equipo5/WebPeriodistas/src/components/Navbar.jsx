@@ -16,7 +16,7 @@ function Navbar() {
               onClick={ () => navigate("/")} />
             </article>          
             <ul className='nav-menu'>
-              <li className='nav-item'>Noticias</li>
+              <li className='nav-item' onClick={() => navigate('/noticias')}>Noticias</li>
               <li className='nav-item'>Fixture</li>
               <li className='nav-item'>Club</li>
               <li className='nav-item'>Plantel</li>

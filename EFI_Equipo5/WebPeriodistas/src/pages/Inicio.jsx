@@ -1,8 +1,8 @@
 import Carrusel from '../components/Carrusel';
 import CarruselNoticias from '../components/NoticiasCarru';
 import TablaPosiciones from '../components/TablaPosiciones';
-import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
+import DailyCheck from '../components/DailyCheck';
+
 
 function Inicio() {
   return (
@@ -16,10 +16,7 @@ function Inicio() {
       <article className='izquierda'>
         <div className="cards-container">
           <TablaPosiciones />
-          <Card title="Daily Check" className="primercard">
-            <p>Registro diario de actividades o check.</p>
-            <Button label="Completar" icon="pi pi-check" />
-          </Card>
+          <DailyCheck />
         </div>
       
       </article>
@@ -44,6 +41,11 @@ function Inicio() {
       
     <section className='noticias-carru'>
       <CarruselNoticias />
+    </section>
+
+    <section className='matches' style={{ color: 'white'}}>
+      <h1>Ultimo partido</h1> 
+      <h2>Proximo partido</h2>
     </section>
   </article>
   );

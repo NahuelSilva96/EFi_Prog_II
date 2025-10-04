@@ -44,8 +44,13 @@ function Inicio() {
     </section>
 
     <section className='matches' style={{ color: 'white'}}>
-      <h1>Ultimo partido</h1> 
-      <h2>Proximo partido</h2>
+      <article className='pre-matches'>
+        <h2>Ultimo partido</h2>
+      </article> 
+      <article className='post-matches'>
+        <h2>Proximo partido</h2>
+      </article>
+      
     </section>
   </article>
   );

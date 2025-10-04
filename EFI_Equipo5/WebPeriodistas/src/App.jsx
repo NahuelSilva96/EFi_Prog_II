@@ -6,7 +6,8 @@ import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import Tienda from './pages/Tienda';
 import './styles/main.css';
-import './styles/tabla.css';
+import './styles/daily-check.css';
+
         
 
 function App() {

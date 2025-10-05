@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react'; 
+import { Button } from 'primereact/button';
 
 
 
 function Navbar() {
-  let navigate = useNavigate(); 
+  let navigate = useNavigate();
+  
       return (
         <nav className='nav'>
           <section className='nav-left'>
@@ -23,9 +25,9 @@ function Navbar() {
             </ul>
           </section>
           <div className='users-links'>
-            <a><i className="pi pi-id-card" style={{ marginRight: "8px"}}/><span>Hacete Socio</span></a>
-            <a><i className="pi pi-user" style={{ marginRight: "8px"}}/>Socios </a>
-            <a><i className="pi pi-shopping-bag" style={{ marginRight: "8px"}}/>Tienda</a>
+            <Button label="Hacete Socio" icon="pi pi-id-card" iconPos="left" className="btn-hacete-socio p-button-rounded"  onClick={() => navigate('/hacete-socio')} />
+            <Button label="Socios" icon="pi pi-user" className="btn-socios" onClick={() => navigate('/socios')} />
+            <Button label="Tienda" icon="pi pi-shopping-bag" className="btn-tienda" onClick={() => navigate('/tienda')} />
           </div>
         </nav>
     );

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react'; 
+import '../styles/footer.css';
 
 
 function Footer() {
@@ -24,18 +25,18 @@ function Footer() {
         {/* Redes Sociales  */}
         <div classname="">
             
-            <section className="derecha">
-                <article className="redes-container">
-                  <div className="social-media">
+            <section className="derecha-footer">
+                <article className="redes-container-footer">
+                  <div className="social-media-footer">
                     <i className="pi pi-instagram"></i>
                   </div>
-                  <div className="social-media">
+                  <div className="social-media-footer">
                     <i className="pi pi-twitter"></i>
                   </div>
-                  <div className="social-media">
+                  <div className="social-media-footer">
                     <i className="pi pi-youtube"></i>
                   </div>
-                  <div className="social-media">
+                  <div className="social-media-footer">
                     <i className="pi pi-facebook"></i>
                   </div>
                 </article>

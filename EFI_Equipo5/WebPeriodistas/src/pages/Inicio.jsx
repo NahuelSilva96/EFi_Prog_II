@@ -2,6 +2,7 @@ import Carrusel from '../components/Carrusel';
 import CarruselNoticias from '../components/NoticiasCarru';
 import TablaPosiciones from '../components/TablaPosiciones';
 import DailyCheck from '../components/DailyCheck';
+import '../styles/inicio.css';
 
 
 function Inicio() {

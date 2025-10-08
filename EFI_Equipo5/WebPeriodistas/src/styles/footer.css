@@ -39,23 +39,30 @@ footer {
     display: flex;
     justify-content: flex-end;
 }
-.redes-container {
+.redes-container-footer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
 }
-.social-icon {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-    padding: 5px;
+.social-media-footer {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  background: rgba(29,29,29,0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.social-icon:hover {
-    color: #007bff;
-    transform: scale(1.1);
+
+.social-media-footer:hover {
+  background: #ff5e00;
 }
 .copyright {
     width: 100%;

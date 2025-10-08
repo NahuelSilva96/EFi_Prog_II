@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Inicio from './pages/Inicio';
+import Footer from './components/Footer';
 import Noticias from './pages/Noticias';
 import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import Tienda from './pages/Tienda';
 import './styles/main.css';
 import './styles/daily-check.css';
+
 
         
 
@@ -22,6 +24,8 @@ function App() {
           <Route path="/fixture" element={<Fixture />} />
           <Route path="/tienda" element={<Tienda />} />*/}
         </Routes>
+
+        <Footer />
       </Router>
     </div>
   );

@@ -353,7 +353,8 @@
 .plantel {
   background-color: black;
   margin: 150px 0px;
-  padding: 70px 20px 70px 20px ;
+  padding: 70px 20px 70px 20px;
+  overflow: auto; 
 }
 
 .header-plantel {
@@ -364,15 +365,13 @@
 .player-selector {
   display: flex;
   justify-content: center;
-  margin: 20px 40px;
-  background-color: red;
+  margin: 20px 50px;
+  max-width: 1700px;
 }
 
 .btn-player {
-  background-color: blue;
   margin: 10px;
   padding: 20px;
   border-radius: 50%;
-
-
+  
 }

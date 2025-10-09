@@ -1,0 +1,27 @@
+/* plantel */
+
+.plantel {
+  background-color: black;
+  margin: 150px 0px;
+  padding: 70px 20px 70px 20px;
+  overflow: auto; 
+}
+
+.header-plantel {
+  margin: 20px 30px 20px 30px;
+  padding-left: 300px;
+}
+
+.player-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 50px;
+  max-width: 1700px;
+}
+
+.btn-player {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 50%;
+  
+}

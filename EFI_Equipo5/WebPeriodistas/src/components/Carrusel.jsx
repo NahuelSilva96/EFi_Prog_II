@@ -1,4 +1,5 @@
 import { Carousel } from 'primereact/carousel';
+import { Button } from 'primereact/button';
 
 function Carrusel() {
   const images = [
@@ -33,6 +34,7 @@ function Carrusel() {
         showNavigators={false}
       />
     </div>
+  
   );
 }
 

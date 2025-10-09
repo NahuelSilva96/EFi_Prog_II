@@ -19,17 +19,22 @@ function CarruselNoticias() {
     ];
 
         return(
-            <div className="noticias-carrusel-constante">
-                <div className="noticias-track">
-                    {[...noticias, ...noticias].map((noticia, index) => (
-                        <div className="card_noticias" key={index}>
-                            <img src={noticia.imagen} alt={noticia.titulo} />
-                            <div className="card_noticias_content">
-                                <p className="card_noticias_title">{noticia.titulo}</p>
-                                <p className="card_noticias_description">{noticia.descripcion}</p>
+            <div>
+                <div className="noticias-carrusel-constante">
+                    <div className="noticias-track">
+                        {[...noticias, ...noticias].map((noticia, index) => (
+                            <div className="card_noticias" key={index}>
+                                <img src={noticia.imagen} alt={noticia.titulo} />
+                                <div className="card_noticias_content">
+                                    <p className="card_noticias_title">{noticia.titulo}</p>
+                                    <p className="card_noticias_description">{noticia.descripcion}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                    <div className='mas-noticias'>
+                    <Button label='Mas Noticas' className='btn-hacete-socio' icon='pi pi-chevron-right' />
+                  </div>
                 </div>
             </div>
             );

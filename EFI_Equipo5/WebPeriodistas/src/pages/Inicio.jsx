@@ -46,63 +46,70 @@ function Inicio() {
     <section className='noticias-carru'>
       <CarruselNoticias />
     </section>
+    <section className='matches'>
+          <h2 className='titulo-matches'> PARTIDOS: </h2>
 
-    <section className='matches' style={{ color: 'white'}}>
-      <article className='positions-container'>
-        <TablaPosiciones />
-      </article>
-      <article className='pre-matches-container'>
-        <span className='pre-matches-title'>Ultimo Partido:</span>
-        <article className='pre-matches-data'>
-          <article className='pre-match-date'>
-            <p className='match-day'>04</p>
-            <p className='match-month'>Oct</p>
-          </article>
-          <article className='pre-match-result'>
-            <section className='match-info-container'>
-                <div className='date-info'>
-                  <span>
-                    Liga de Profesionales - 15:40hs
-                  </span>
-                </div>
-                <div className='team-container'>
-                  <span className='team-name'>Periodistas</span>
-                  <span className='team-result'>0</span>
-                </div>
-                <div className='team-container'>
-                  <span className='team-name'>Abogados B</span>
-                  <span className='team-result'>2</span>
-                </div>
-            </section>
-          </article>
-        </article>
-      </article> 
-      <article className='post-matches-container'>
-        <span className='post-matches-title'>Siguiente Partido:</span>
-        <article className='post-matches-data'>
-          <article className='post-match-date'>
-            <p className='incoming-match-day'>11</p>
-            <p className='incoming-match-month'>Oct</p>
-          </article>
-          <section className='post-match-incoming'>
-          <section className='incoming-match-info-container'>
-            <div className='incoming-date-info'>
-              <span>Liga de Profesionales<br />12:20hs</span>
-            </div>
           
-              {[...equipos]
-                .filter(eq => eq.nombre === "Periodistas" || eq.nombre === "Abogados B")
-                .map(eq => (
-                  <div className='incoming-team-container' key={eq.pos}>
-                    <span className='incoming-team-name'>{eq.nombre}</span>
-                    <div className='incoming-team-table'>{eq.pts} pts</div>
+      <section className='matches-container' style={{ color: 'white'}}>
+        <article className='pre-matches-container'>
+        <div className='pre-top'>
+          <span className='pre-matches-title'>ANTERIOR:</span>
+          <article className='pre-match-date'>
+                <p className='match-day'>04</p>
+                <p className='match-month'>Oct</p>
+          </article>
+        </div>
+          <article className='pre-matches-data'>
+            
+            <article className='pre-match-result'>
+              <section className='match-info-container'>
+                  <div className='date-info'>
+                    <span>
+                      Liga de Profesionales - 15:40hs
+                    </span>
                   </div>
-              ))}
+                  <div className='team-container'>
+                    <span className='team-name'>Periodistas</span>
+                    <span className='team-result'>0</span>
+                  </div>
+                  <div className='team-container'>
+                    <span className='team-name'>Abogados B</span>
+                    <span className='team-result'>2</span>
+                  </div>
+              </section>
+            </article>
+          </article>
+        </article> 
+        <article className='post-matches-container'>
+          <span className='post-matches-title'>PROXIMO:</span>
+          <article className='post-matches-data'>
+            <article className='post-match-date'>
+              <p className='incoming-match-day'>11</p>
+              <p className='incoming-match-month'>Oct</p>
+            </article>
+            <section className='post-match-incoming'>
+            <section className='incoming-match-info-container'>
+              <div className='incoming-date-info'>
+                <span>Liga de Profesionales<br />12:20hs</span>
+              </div>
+            
+                {[...equipos]
+                  .filter(eq => eq.nombre === "Periodistas" || eq.nombre === "Abogados B")
+                  .map(eq => (
+                    <div className='incoming-team-container' key={eq.pos}>
+                      <span className='incoming-team-name'>{eq.nombre}</span>
+                      <div className='incoming-team-table'>{eq.pts} pts</div>
+                    </div>
+                ))}
+              </section>
             </section>
-          </section>
-
+              
+          </article>
         </article>
-      </article>
+        <article className='positions-container'>
+          <TablaPosiciones />
+        </article>
+      </section>
     </section>
 
   </article>

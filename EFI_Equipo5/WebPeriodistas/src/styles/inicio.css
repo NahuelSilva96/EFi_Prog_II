@@ -49,7 +49,7 @@
 }
 
 .social-media:hover {
-  background: #ff5e00;
+  background: var(--color-naranja-hover);
 }
 
 /* noticias */
@@ -61,6 +61,19 @@
   width: 100%;
   padding: 20px 0;
   z-index: 10; 
+}
+
+.titulo-noticias {
+  position: absolute;
+  top: 20px;
+  padding: 15px 60px;
+  border-radius: 0 40px 40px 0;
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-blanco);
+  font-size: 2.2rem;
+  font-weight: bold;
+  z-index: 20;
+  letter-spacing: 1px;
 }
 
 .noticias-track {
@@ -90,6 +103,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
+
 
 .card_noticias img {
   width: 100%;
@@ -131,12 +145,34 @@
   justify-content: end;  
 }
 
-/* ultimo y siguiente partido */
+/* Partidos*/
 .matches {
-  background-color: red;
-  margin: 70px 30px;
-  display: flex;
+  background-color: var(--color-gris-oscuro);
+  margin: 70px 0;
+  padding: 20px;
 }
 
+.titulo-matches {
+  color: var(--color-blanco);
+  margin: 5px 5px ;
+  padding: 70px 10px 20px 190px;
+  font-size: 50px;
+}
 
+.matches-container {
+  display: flex;
+  justify-content: space-around;
+}
 
+.pre-matches-container {
+  background-color: red;
+
+}
+.pre-top {
+  display: flex;
+justify-content: space-between;
+  background-color: blue;
+}
+.pre-matches-data {
+  background-color: violet;
+}

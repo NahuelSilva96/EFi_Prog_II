@@ -21,6 +21,7 @@ function CarruselNoticias() {
         return(
             <div>
                 <div className="noticias-carrusel-constante">
+                    <h2 className='titulo-noticias'>Noticias</h2>
                     <div className="noticias-track">
                         {[...noticias, ...noticias].map((noticia, index) => (
                             <div className="card_noticias" key={index}>

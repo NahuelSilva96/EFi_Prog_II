@@ -24,18 +24,8 @@ function Inicio() {
     <section className='carrusel'>
       <Carrusel />
     </section>
-  
-    <section className='overlay'>
-      
-      <article className='izquierda'>
-        <div className="cards-container">
-          
-          <DailyCheck />
-        </div>
-      
-      </article>
-
-      <section className="derecha">
+     <section className='overlay'>
+      <section className="redes">
         <article className="redes-container">
           <div className="social-media">
             <a target="_blank" href="https://www.instagram.com/equipodeperiodistasr4?igsh=M3VmMXUxeWhvamI0"><i className="pi pi-instagram"></i></a>
@@ -58,7 +48,9 @@ function Inicio() {
     </section>
 
     <section className='matches' style={{ color: 'white'}}>
-      <TablaPosiciones />
+      <article className='positions-container'>
+        <TablaPosiciones />
+      </article>
       <article className='pre-matches-container'>
         <span className='pre-matches-title'>Ultimo Partido:</span>
         <article className='pre-matches-data'>

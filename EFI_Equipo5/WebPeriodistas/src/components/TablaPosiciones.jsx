@@ -1,3 +1,4 @@
+
 function TablaPosiciones(){
     const equipos = [
       { pos: 1, nombre: "Fusión Banco de Cuyo", pts: 17, pj: 9, pg: 5, pe: 2, pp: 2, gf: 15, gc: 6 },

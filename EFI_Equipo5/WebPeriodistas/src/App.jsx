@@ -7,7 +7,6 @@ import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import Tienda from './pages/Tienda';
 import './styles/main.css';
-import './styles/daily-check.css';
 
 
         

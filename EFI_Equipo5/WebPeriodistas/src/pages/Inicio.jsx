@@ -38,16 +38,16 @@ function Inicio() {
       <section className="derecha">
         <article className="redes-container">
           <div className="social-media">
-            <i className="pi pi-instagram"></i>
+            <a target="_blank" href="https://www.instagram.com/equipodeperiodistasr4?igsh=M3VmMXUxeWhvamI0"><i className="pi pi-instagram"></i></a>
           </div>
           <div className="social-media">
-            <i className="pi pi-twitter"></i>
+            <a target="_blank" href="https://x.com/periodistasrio4"><i className="pi pi-twitter"></i></a>
           </div>
           <div className="social-media">
-            <i className="pi pi-youtube"></i>
+            <a target="_blank" href="https://www.youtube.com/@periodistasrio4"><i className="pi pi-youtube"></i></a>
           </div>
           <div className="social-media">
-            <i className="pi pi-facebook"></i>
+            <a target="_blank" href="https://www.tiktok.com/@periodistasrio4"><i className="pi pi-tiktok"></i></a>
           </div>
         </article>
       </section>

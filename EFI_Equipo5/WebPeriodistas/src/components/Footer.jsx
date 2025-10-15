@@ -24,23 +24,22 @@ function Footer() {
         
         {/* Redes Sociales  */}
         <div classname="">
-            
-            <section className="derecha-footer">
-                <article className="redes-container-footer">
-                  <div className="social-media-footer">
-                    <i className="pi pi-instagram"></i>
-                  </div>
-                  <div className="social-media-footer">
-                    <i className="pi pi-twitter"></i>
-                  </div>
-                  <div className="social-media-footer">
-                    <i className="pi pi-youtube"></i>
-                  </div>
-                  <div className="social-media-footer">
-                    <i className="pi pi-facebook"></i>
-                  </div>
-                </article>
-            </section>
+          <section className="derecha-footer">
+            <article className="redes-container-footer">
+              <div className="social-media-footer">
+                <a target="_blank" href="https://www.instagram.com/equipodeperiodistasr4?igsh=M3VmMXUxeWhvamI0"><i className="pi pi-instagram"></i></a>
+              </div>
+              <div className="social-media-footer">
+                <a target="_blank" href="https://x.com/periodistasrio4"><i className="pi pi-twitter"></i></a>
+              </div>
+              <div className="social-media-footer">
+                <a target="_blank" href="https://www.youtube.com/@periodistasrio4"><i className="pi pi-youtube"></i></a>
+              </div>
+              <div className="social-media-footer">
+                <a target="_blank" href="https://www.tiktok.com/@periodistasrio4"><i className="pi pi-tiktok"></i></a>
+              </div>
+            </article>
+          </section>
         </div>
 
         {/* Sección de Copyright */}

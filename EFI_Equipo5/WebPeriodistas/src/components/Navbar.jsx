@@ -35,9 +35,9 @@ function Navbar() {
             </article>          
             <ul className='nav-menu'>
               <li className='nav-item' onClick={() => navigate('/noticias')}>Noticias</li>
-              <li className='nav-item'>Fixture</li>
-              <li className='nav-item'>Club</li>
-              <li className='nav-item'>Plantel</li>
+              <li className='nav-item' onClick={() => navigate('/fixture')}>Fixture</li>
+              <li className='nav-item' onClick={() => navigate('/club')}>Club</li>
+              <li className='nav-item' onClick={() => navigate('/plantel')}>Plantel</li>
             </ul>
           </section>
           <div className='users-links'>

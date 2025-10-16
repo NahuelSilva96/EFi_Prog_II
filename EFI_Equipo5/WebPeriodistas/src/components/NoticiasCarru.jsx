@@ -35,7 +35,7 @@ function CarruselNoticias() {
                     </div>
                     <div className='mas-noticias'>
                     <Button label='Mas Noticas' className='btn-hacete-socio' icon='pi pi-chevron-right' />
-                  </div>
+                    </div>
                 </div>
             </div>
             );

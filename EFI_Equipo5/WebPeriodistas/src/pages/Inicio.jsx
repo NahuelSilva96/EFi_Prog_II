@@ -4,6 +4,8 @@ import TablaPosiciones from '../components/TablaPosiciones';
 import DailyCheck from '../components/DailyCheck';
 import '../styles/inicio.css';
 import { Button } from 'primereact/button';
+import Contador from "../components/Contador";
+
 
 
 function Inicio() {
@@ -24,7 +26,8 @@ function Inicio() {
     <section className='carrusel'>
       <Carrusel />
     </section>
-     <section className='overlay'>
+
+    <section className='overlay'>
       <section className="redes">
         <article className="redes-container">
           <div className="social-media">
@@ -46,72 +49,66 @@ function Inicio() {
     <section className='noticias-carru'>
       <CarruselNoticias />
     </section>
-    <section className='matches'>
-          <h2 className='titulo-matches'> PARTIDOS: </h2>
 
-          
-      <section className='matches-container' style={{ color: 'white'}}>
-        <article className='pre-matches-container'>
-        <div className='pre-top'>
-          <span className='pre-matches-title'>ANTERIOR:</span>
-          <article className='pre-match-date'>
-                <p className='match-day'>04</p>
-                <p className='match-month'>Oct</p>
-          </article>
-        </div>
-          <article className='pre-matches-data'>
-            
-            <article className='pre-match-result'>
-              <section className='match-info-container'>
-                  <div className='date-info'>
-                    <span>
-                      Liga de Profesionales - 15:40hs
-                    </span>
-                  </div>
-                  <div className='team-container'>
-                    <span className='team-name'>Periodistas</span>
-                    <span className='team-result'>0</span>
-                  </div>
-                  <div className='team-container'>
-                    <span className='team-name'>Abogados B</span>
-                    <span className='team-result'>2</span>
-                  </div>
-              </section>
-            </article>
-          </article>
-        </article> 
-        <article className='post-matches-container'>
-          <span className='post-matches-title'>PROXIMO:</span>
-          <article className='post-matches-data'>
-            <article className='post-match-date'>
-              <p className='incoming-match-day'>11</p>
-              <p className='incoming-match-month'>Oct</p>
-            </article>
-            <section className='post-match-incoming'>
-            <section className='incoming-match-info-container'>
-              <div className='incoming-date-info'>
-                <span>Liga de Profesionales<br />12:20hs</span>
-              </div>
-            
-                {[...equipos]
-                  .filter(eq => eq.nombre === "Periodistas" || eq.nombre === "Abogados B")
-                  .map(eq => (
-                    <div className='incoming-team-container' key={eq.pos}>
-                      <span className='incoming-team-name'>{eq.nombre}</span>
-                      <div className='incoming-team-table'>{eq.pts} pts</div>
-                    </div>
-                ))}
-              </section>
+    <section className="matches">
+      <section className="header-matches">
+        <h2 className='header-title'>Partidos</h2>
+        <Contador />
+      </section>
+      <section className="matches-container">
+        <article className="match-card">
+          <article className='match-container'>
+            <section className='match'>
+              <p>Anterior</p>
+              <span>Liga de Profesionales</span>
             </section>
-              
+            <section className='partido'>
+              <article className='team-1'>
+                <p>Periodistas</p>
+              </article>
+              <article className='resultado'>
+                <span className='result-container'>0</span>
+                <span className='result-container'>-</span>
+                <span className='result-container'>2</span>
+              </article>
+              <article className='team-2'>
+                <p>Abogados</p>
+              </article>
+            </section>
+            <section className='data-match'>
+              <p>Sab 18/10/25 - 15:40hs / Abogados 1</p>
+            </section>
           </article>
         </article>
-        <article className='positions-container'>
+        <article className="match-card mc-centro">
+          <article className='match-container'>
+            <section className='match'>
+              <p>Siguiente</p>
+              <span>Liga de Profesionales</span>
+            </section>
+            <section className='partido'>
+              <article className='team-1 '>
+                <p>Cuyo</p>
+              </article>
+              <article className='resultado'>
+                <span className='result-container'>-</span>
+                <span className='result-container'>-</span>
+                <span className='result-container'>-</span>
+              </article>
+              <article className='team-2'>
+                <p>Periodistas</p>
+              </article>
+            </section>
+            <section className='data-match'>
+              <p>Sab 25/10/25 - 15:40hs / Abogados 1</p>
+            </section>
+          </article>
+        </article>
+        <article className="match-card">
           <TablaPosiciones />
         </article>
       </section>
     </section>
-
   </article>
   );
 }

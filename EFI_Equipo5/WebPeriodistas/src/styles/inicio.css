@@ -145,34 +145,234 @@
   justify-content: end;  
 }
 
-/* Partidos*/
 .matches {
-  background-color: var(--color-gris-oscuro);
-  margin: 70px 0;
-  padding: 20px;
+  background-color: black;
+  color: white;
+  padding: 70px 30px 280px;
+  margin: 180px 0; 
 }
 
-.titulo-matches {
-  color: var(--color-blanco);
-  margin: 5px 5px ;
-  padding: 70px 10px 20px 190px;
-  font-size: 50px;
+.header-matches {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+  margin-bottom: 160px;
 }
 
 .matches-container {
   display: flex;
   justify-content: space-around;
 }
-
-.pre-matches-container {
-  background-color: red;
-
-}
-.pre-top {
+.match-card {
+  width: 490px;
+  height: 354px;
+  background: var(--color-gris-oscuro);
+  position: relative;
   display: flex;
-justify-content: space-between;
-  background-color: blue;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
 }
-.pre-matches-data {
-  background-color: violet;
+
+.match-card {
+  width: 490px;
+  height: 354px;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+.match-card h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.mc-centro::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg,var(--color-naranja-hover), var(--color-naranja-hover));
+  height: 190%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.match-card::after {
+  content: '';
+  position: absolute;
+  background: var(--color-gris-oscuro);
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+.positions {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  z-index: 2;
+  color: white;
+  background: transparent;
+}
+
+.positions .top {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--color-naranja);
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-naranja);
+  padding-bottom: 5px;
+}
+
+.teams-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.position {
+  color: var(--color-naranja);
+  font-weight: bold;
+  width: 25px;
+  text-align: center;
+}
+
+.team-name {
+  color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.points {
+  font-weight: bold;
+  color: var(--color-naranja);
+}
+
+.team.highlight {
+  background: var(--color-naranja);
+}
+
+.team.highlight .team-name,
+.team.highlight .position,
+.team.highlight .points {
+  color: black;
+}
+
+.teams-table::-webkit-scrollbar {
+  width: 6px;
+}
+.teams-table::-webkit-scrollbar-thumb {
+  background: var(--color-naranja);
+  border-radius: 5px;
+}
+
+
+.last-match-container {
+  z-index: 2;
+}
+
+.match-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 2;
+  color: white;
+}
+
+.match {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  color: var(--color-naranja);
+  border-bottom: 2px solid var(--color-naranja);
+  padding: 15px;
+}
+
+.partido {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 20px;
+  margin: 10px 0;
+}
+
+.team {
+  font-weight: bold;
+  color: white;
+}
+
+.resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: var(--color-naranja);
+  width: 20%;
+}
+
+.data-match {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgb(200, 200, 200);
+  margin-top: 5px;
+}
+
+.result-container {
+  background-color: black;
+  margin: 2px;
+  padding: 4px 10px;  
+  border-radius: 6px;
+}
+
+.team-1, .team-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }

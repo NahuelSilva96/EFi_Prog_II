@@ -1,3 +1,12 @@
+.desktop-only { 
+  display: flex;
+  width: 2000px;
+  gap: 20px;
+  align-items: center;
+}
+.mobile-only { 
+  display: none;
+}
 
 .nav {
     width: 100%;
@@ -47,13 +56,6 @@
   cursor: pointer;
 }
 
-.nav-left {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    padding: 20px;
-}
 .logo {
     margin: 0;
     display: block;
@@ -61,13 +63,15 @@
     height: 125px;
     width: 100px;
 }
+
 .nav-menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex;
     width: 70%;
     margin-top: 0;
     list-style: none;
-    margin-left: 20px;
+    margin-left: 60px;
+    gap: 60px;
 }
 .logo-nav{
     max-height: 85px;
@@ -148,7 +152,91 @@
   border-radius: 5px;
 }
 
-
 .btn-tienda:hover {
   background-color: var(--color-naranja-hover);
 }
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-gris-oscuro);
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    
+  }
+
+  .hamburger {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-blanco);
+    border-radius: 2px;
+  }
+  
+  .nav {
+    background: var(--color-gris-oscuro);
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px;
+    height: 90px;
+  }
+
+  .logo {
+    margin-top: 50px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: end;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+  
+  .logo-nav{
+      max-height: 70px;
+      margin: 0 20px 0 20px;
+  }
+
+  .nav-item{
+      margin: 0;
+  }
+
+  .users-links {
+      width: 80%;
+      margin: 130px 50px;
+  }
+
+
+
+  .btn-tienda {
+    border: 2px solid var(--color-naranja);
+  }
+
+  .btn-tienda:hover {
+    border: none;
+  }
+  .nav.scrolled {
+    background: var(--color-gris-oscuro); /* o el color que quieras fijo */
+    padding-top: 40px;
+    height: 125px;
+  }
+
+  .nav.scrolled .logo-nav {
+    height: 85px;
+  }
+}
+
+ 

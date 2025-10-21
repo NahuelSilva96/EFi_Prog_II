@@ -46,7 +46,7 @@ if (distance <= 0) { clearInterval(interval); setTimeLeft({ days: "00" , hours: 
                         ? "horas"
                         : unit === "minutes"
                         ? "min"
-                        : "s"}
+                        : "seg"}
                     </div>
                 </div>
                 ))}

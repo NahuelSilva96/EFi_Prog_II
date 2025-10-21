@@ -157,7 +157,7 @@
   align-items: center;
   justify-content: space-around;
   padding: 60px 20px;
-  margin-bottom: 160px;
+  margin-bottom: 90px;
 }
 
 .matches-container {
@@ -217,7 +217,6 @@
   content: '';
   position: absolute;
   background: var(--color-gris-oscuro);
-  ;
   inset: 5px;
   border-radius: 15px;
 }  

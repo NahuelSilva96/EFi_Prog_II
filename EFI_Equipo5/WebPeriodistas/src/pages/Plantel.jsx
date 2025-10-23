@@ -27,7 +27,13 @@ function Plantel() {
     { id: 22, nombre: "Gero Marino", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 22, zona: "defensores" },
   ];
 
-  const [jugadorSeleccionado, setJugadorSeleccionado] = useState(jugadores[0]);
+  const cuerpoTecnico = [
+    { id: 23, nombre: "José Luis Debernardi", img: "/img/cuerpo-tecnico/debernardi.jpg", posicion: "Director Técnico" },
+    { id: 24, nombre: "Martín Coy", img: "/img/cuerpo-tecnico/coy.jpg", posicion: "Ayudante de Campo" },
+    { id: 25, nombre: "Belén Llompart", img: "/img/cuerpo-tecnico/llompart.jpg", posicion: "Kinesióloga" },
+  ];
+
+  const [seleccionado, setSeleccionado] = useState(jugadores[0]);
 
   return (
     <section className="plantel">
@@ -36,12 +42,13 @@ function Plantel() {
           <h1>JUGADORES</h1>
         </div>
 
+        {/* Lista de jugadores */}
         <div className="player-selector">
           {jugadores.map((jugador) => (
             <div
               key={jugador.id}
-              className={`player-card ${jugadorSeleccionado.id === jugador.id ? "active" : ""}`}
-              onClick={() => setJugadorSeleccionado(jugador)}
+              className={`player-card ${seleccionado.id === jugador.id ? "active" : ""}`}
+              onClick={() => setSeleccionado(jugador)}
             >
               <img src={jugador.img} alt={jugador.nombre} className="player-img" />
               <p>{jugador.nombre}</p>
@@ -49,39 +56,61 @@ function Plantel() {
           ))}
         </div>
 
+        {/* Sección del cuerpo técnico */}
+        <div className="header-plantel tecnico">
+          <h1>CUERPO TÉCNICO</h1>
+        </div>
+
+        <div className="cuerpo-tecnico">
+          {cuerpoTecnico.map((miembro) => (
+            <div
+              key={miembro.id}
+              className={`player-card ${seleccionado.id === miembro.id ? "active" : ""}`}
+              onClick={() => setSeleccionado(miembro)}
+            >
+              <img src={miembro.img} alt={miembro.nombre} className="player-img" />
+              <p>{miembro.nombre}</p>
+              <small>{miembro.posicion}</small>
+            </div>
+          ))}
+        </div>
+
+        {/* Cancha y detalle */}
         <div className="cancha-section">
           <div className="cancha">
             <img src="/img/cancha.jpeg" alt="Cancha" className="cancha-fondo" />
 
             <div className="formacion">
               <div className="delanteros">
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "delanteros" ? "resaltado" : ""}`}>10</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "delanteros" ? "resaltado" : ""}`}>9</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "delanteros" ? "resaltado" : ""}`}>11</div>
+                <div className={`jugador-pos ${seleccionado.zona === "delanteros" ? "resaltado" : ""}`}>10</div>
+                <div className={`jugador-pos ${seleccionado.zona === "delanteros" ? "resaltado" : ""}`}>9</div>
+                <div className={`jugador-pos ${seleccionado.zona === "delanteros" ? "resaltado" : ""}`}>11</div>
               </div>
               <div className="mediocampistas">
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>8</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>5</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>7</div>
+                <div className={`jugador-pos ${seleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>8</div>
+                <div className={`jugador-pos ${seleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>5</div>
+                <div className={`jugador-pos ${seleccionado.zona === "mediocampistas" ? "resaltado" : ""}`}>7</div>
               </div>
               <div className="defensores">
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "defensores" ? "resaltado" : ""}`}>2</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "defensores" ? "resaltado" : ""}`}>3</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "defensores" ? "resaltado" : ""}`}>4</div>
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "defensores" ? "resaltado" : ""}`}>6</div>
+                <div className={`jugador-pos ${seleccionado.zona === "defensores" ? "resaltado" : ""}`}>2</div>
+                <div className={`jugador-pos ${seleccionado.zona === "defensores" ? "resaltado" : ""}`}>3</div>
+                <div className={`jugador-pos ${seleccionado.zona === "defensores" ? "resaltado" : ""}`}>4</div>
+                <div className={`jugador-pos ${seleccionado.zona === "defensores" ? "resaltado" : ""}`}>6</div>
               </div>
               <div className="arquero">
-                <div className={`jugador-pos ${jugadorSeleccionado.zona === "arquero" ? "resaltado" : ""}`}>1</div>
+                <div className={`jugador-pos ${seleccionado.zona === "arquero" ? "resaltado" : ""}`}>1</div>
               </div>
             </div>
           </div>
 
-          <div className="detalle-jugador">
-            <img src={jugadorSeleccionado.img} alt={jugadorSeleccionado.nombre} />
-            <h2>{jugadorSeleccionado.nombre}</h2>
-            <p><strong>Posición:</strong> {jugadorSeleccionado.posicion}</p>
-            <p><strong>Número:</strong> {jugadorSeleccionado.numero}</p>
-          </div>
+          <section className="detalle-section">
+            <div className="detalle-jugador">
+              <img src={seleccionado.img} alt={seleccionado.nombre} />
+              <h2>{seleccionado.nombre}</h2>
+              <p><strong>Posición:</strong> {seleccionado.posicion}</p>
+              {seleccionado.numero && <p><strong>Número:</strong> {seleccionado.numero}</p>}
+            </div>
+          </section>
         </div>
       </article>
     </section>

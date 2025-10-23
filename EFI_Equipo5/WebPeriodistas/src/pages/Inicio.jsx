@@ -109,6 +109,11 @@ function Inicio() {
         </article>
       </section>
     </section>
+
+    <section className='daily-check'>
+      <h3>Check Diario</h3>
+      <DailyCheck />
+    </section>
   </article>
   );
 }

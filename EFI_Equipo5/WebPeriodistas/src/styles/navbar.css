@@ -192,6 +192,7 @@
     justify-content: space-between; 
     padding: 10px 20px;
     height: 90px;
+    font-size: 20px;
   }
 
   .logo {
@@ -236,6 +237,18 @@
 
   .nav.scrolled .logo-nav {
     height: 85px;
+  }
+
+  .btn-hacete-socio {
+    font-size: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .btn-socios{
+    font-size: 10px;
+  }
+  .btn-tienda {
+    font-size: 10px;
   }
 }
 

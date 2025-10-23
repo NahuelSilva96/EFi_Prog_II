@@ -23,7 +23,7 @@ const DailyCheck = () => {
               <small className="badge">Pasta</small>
               <div className="description">
                 <div className="title">
-                  <p className="title"><strong>Check Diario</strong></p>
+                  <p className="title"><strong>Clickea Aqui</strong></p>
                   <svg
                     fillRule="nonzero"
                     height="15px"

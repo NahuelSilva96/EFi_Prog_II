@@ -112,6 +112,7 @@ function Inicio() {
 
     <section className='daily-check'>
       <h3>Check Diario</h3>
+      <p>Hacete socio y ganá premios. Entrá todos los días y completá la marca semanal para desbloquear tu recompensa.</p>
       <DailyCheck />
     </section>
   </article>

@@ -6,69 +6,10 @@ function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer>
-      <section classname="">
-        <ul className="footer-content-publi">
-
-          <li >
-            <a href="">
-              <img src="./public/img/copia_centro.png" alt="" />
-            </a></li>
-          <li>
-            <a href="">
-              <img src="./public/img/barja_bus.png" alt="Barja Bus"/>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/Dg.png" alt="Dg" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/Chic.jpg" alt="Chic"/>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/equi5.png" alt="Equis5" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/barcadia.png" alt="Barcadia" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/1.png" alt="tecnored" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/RP.jpeg" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/CE.png" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="./public/img/SF.png" alt="" />
-            </a>
-          </li>
-
-        </ul>
-      </section>
-
-      <div className="footer-content">
+    <footer className="footer-content">
         
         {/* Redes Sociales  */}
-        <div className="">
-            
-            <section className="footer-top-section">
+        <section className="footer-top-section">
                 <article className="logo_footer">
                   <img src="./public/img/logot.png"/>
                 </article>
@@ -87,9 +28,64 @@ function Footer() {
                     <i className="pi pi-facebook"></i>
                   </div>
                 </article>
-            </section>
+        </section>
 
-        </div>
+
+      <div class="linea"></div>
+
+        <ul className="footer-content-publi">
+          <li >
+            <a href="" className='sponsors'>
+              <img src="./public/img/copia_centro.png" alt="" />
+            </a></li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/barja_bus.png" alt="Barja Bus"/>
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/Dg.png" alt="Dg" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/Chic.jpg" alt="Chic"/>
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/equi5.png" alt="Equis5" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/barcadia.png" alt="Barcadia" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/1.png" alt="tecnored" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/RP.jpeg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/CE.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="" className='sponsors'>
+              <img src="./public/img/SF.png" alt="" />
+            </a>
+          </li>
+
+        </ul>
+
 
         {/* Sección de Copyright */}
         <div className="copyright">
@@ -103,7 +99,6 @@ function Footer() {
 
         </div>
 
-      </div>
     </footer>
   );
 }

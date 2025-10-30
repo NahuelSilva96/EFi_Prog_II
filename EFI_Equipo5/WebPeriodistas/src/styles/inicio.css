@@ -383,7 +383,7 @@
 
 .daily-check .card { 
   width: 880px;
-  height: 280px;
+  height: 300px;
 }
 @media (max-width: 768px) {
   .noticias-carrusel-constante {
@@ -483,8 +483,8 @@
     }
   }
   .daily-check .card { 
-    width: 70%;
-    height: 280px;
+    width: 100%;
+    height: 380px;
   }
 }
 

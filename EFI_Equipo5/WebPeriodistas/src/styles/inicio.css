@@ -83,6 +83,10 @@
   animation-direction: reverse;
 }
 
+.noticias-carrusel-constante:hover .noticias-track {
+  animation-play-state: paused !important;
+}
+
 @keyframes scrollNoticias {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -145,6 +149,7 @@
   justify-content: end;  
 }
 
+/* partidos */
 .matches {
   background-color: black;
   color: white;
@@ -168,17 +173,6 @@
   width: 490px;
   height: 354px;
   background: var(--color-gris-oscuro);
-  position: relative;
-  display: flex;
-  place-content: center;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.match-card {
-  width: 490px;
-  height: 354px;
   position: relative;
   display: flex;
   place-content: center;
@@ -375,3 +369,124 @@
   align-items: center;
   width: 40%;
 }
+
+/* DailyCheck */
+.daily-check {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: transparent;
+  margin-bottom: 100px;
+  color: white;
+}
+
+.daily-check .card { 
+  width: 880px;
+  height: 180px;
+}
+@media (max-width: 768px) {
+  .noticias-carrusel-constante {
+    margin-top: -10px;
+  }
+
+  .titulo-noticias {
+    padding: 8px 30px;
+  }
+
+  .noticias-track {
+    animation: scrollNoticias 30s linear infinite;
+  }
+
+  .card_noticias {
+    width: 120px;
+  }
+
+
+  .card_noticias img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+
+  .redes-container {
+    flex-direction: row;
+    margin-top: 550px;
+  }
+
+  
+  .mas-noticias {
+    margin: 10px 20px;
+  }
+
+
+  .header-matches {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .matches-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  .match-card {
+    width: 490px;
+    height: 354px;
+    background: var(--color-gris-oscuro);
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .match-card {
+    width: 490px;
+    height: 354px;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  }
+  .match-card h2 {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+  }
+
+  .mc-centro::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg,var(--color-naranja-hover), var(--color-naranja-hover));
+    height: 190%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .daily-check .card { 
+    width: 70%;
+    height: 280px;
+  }
+}
+

@@ -3,34 +3,34 @@ import "../styles/plantel.css";
 
 function Plantel() {
   const jugadores = [
-    { id: 1, nombre: "Agustín Alonso", img: "/img/amigos.jpeg", posicion: "Arquero", numero: 1, zona: "arquero" },
-    { id: 2, nombre: "Ema Loza", img: "/img/jugadores/loza.jpg", posicion: "Defensor", numero: 2, zona: "defensores" },
+    { id: 1, nombre: "Agustín Alonso", img: "/img/Alonso.jpg", posicion: "Arquero", numero: 1, zona: "arquero" },
+    { id: 2, nombre: "Ema Loza", img: "/img/Loza.jpg", posicion: "Defensor", numero: 2, zona: "defensores" },
     { id: 3, nombre: "Juan Roumec", img: "/img/jugadores/roumec.jpg", posicion: "Defensor", numero: 3, zona: "defensores" },
-    { id: 4, nombre: "Gonzalo Ganame", img: "/img/jugadores/ganame.jpg", posicion: "Defensor", numero: 4, zona: "defensores" },
-    { id: 5, nombre: "Franco Garello", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 5, zona: "mediocampistas" },
-    { id: 6, nombre: "Angel Melgarejo", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 6, zona: "defensores" },
-    { id: 7, nombre: "Gaston Perez", img: "/img/jugadores/garello.jpg", posicion: "Delantero", numero: 7, zona: "delanteros" },
+    { id: 4, nombre: "Gonzalo Ganame", img: "/img/Ganame.jpg", posicion: "Defensor", numero: 4, zona: "defensores" },
+    { id: 5, nombre: "Franco Garello", img: "/img/Garello.jpg", posicion: "Mediocampista", numero: 5, zona: "mediocampistas" },
+    { id: 6, nombre: "Angel Melgarejo", img: "/img/Melgarejo.jpg", posicion: "Defensor", numero: 6, zona: "defensores" },
+    { id: 7, nombre: "Gaston Perez", img: "/img/Perez.jpg", posicion: "Delantero", numero: 7, zona: "delanteros" },
     { id: 8, nombre: "Marcelo Prieto", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 8, zona: "mediocampistas" },
     { id: 9, nombre: "Nicolas Rivarola", img: "/img/jugadores/garello.jpg", posicion: "Delantero", numero: 9, zona: "delanteros" },
-    { id: 10, nombre: "Diego Amaya", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 10, zona: "mediocampistas" },
-    { id: 11, nombre: "Franco Stefanini", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 11, zona: "mediocampistas" },
-    { id: 12, nombre: "Gastón Galliano", img: "/img/jugadores/garello.jpg", posicion: "Arquero", numero: 12, zona: "arquero" },
+    { id: 10, nombre: "Diego Amaya", img: "/img/Amaya.jpg", posicion: "Mediocampista", numero: 10, zona: "mediocampistas" },
+    { id: 11, nombre: "Franco Stefanini", img: "/img/Stefanini.jpg", posicion: "Mediocampista", numero: 11, zona: "mediocampistas" },
+    { id: 12, nombre: "Gastón Galliano", img: "/img/Galliano.jpg", posicion: "Arquero", numero: 12, zona: "arquero" },
     { id: 13, nombre: "Luciano Rodriguez", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 13, zona: "mediocampistas" },
-    { id: 14, nombre: "Ignacio Berardo", img: "/img/jugadores/garello.jpg", posicion: "Delantero", numero: 14, zona: "delanteros" },
-    { id: 15, nombre: "Federico Ganzer", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 15, zona: "mediocampistas" },
-    { id: 16, nombre: "Jonatan Villavicencio", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 16, zona: "mediocampistas" },
-    { id: 17, nombre: "Agustín Pressaco", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 17, zona: "defensores" },
-    { id: 18, nombre: "Dario Taverna", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 18, zona: "defensores" },
-    { id: 19, nombre: "Franco Amin", img: "/img/jugadores/garello.jpg", posicion: "Mediocampista", numero: 19, zona: "mediocampistas" },
-    { id: 20, nombre: "Mayco Gonzalez", img: "/img/jugadores/garello.jpg", posicion: "Delantero", numero: 20, zona: "delanteros" },
+    { id: 14, nombre: "Ignacio Berardo", img: "/img/Berardo.jpg", posicion: "Delantero", numero: 14, zona: "delanteros" },
+    { id: 15, nombre: "Federico Ganzer", img: "/img/Ganzer.jpg", posicion: "Mediocampista", numero: 15, zona: "mediocampistas" },
+    { id: 16, nombre: "Jonatan Villavicencio", img: "/img/Villavicencio.jpg", posicion: "Mediocampista", numero: 16, zona: "mediocampistas" },
+    { id: 17, nombre: "Agustín Pressaco", img: "/img/Pressaco.jpg", posicion: "Defensor", numero: 17, zona: "defensores" },
+    { id: 18, nombre: "Dario Taverna", img: "/img/Taverna.jpg", posicion: "Defensor", numero: 18, zona: "defensores" },
+    { id: 19, nombre: "Franco Amin", img: "/img/Amin.jpg", posicion: "Mediocampista", numero: 19, zona: "mediocampistas" },
+    { id: 20, nombre: "Mayco Gonzalez", img: "/img/Gonzales.jpg", posicion: "Delantero", numero: 20, zona: "delanteros" },
     { id: 21, nombre: "Denis Eber", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 21, zona: "defensores" },
     { id: 22, nombre: "Gero Marino", img: "/img/jugadores/garello.jpg", posicion: "Defensor", numero: 22, zona: "defensores" },
   ];
 
   const cuerpoTecnico = [
-    { id: 23, nombre: "José Luis Debernardi", img: "/img/cuerpo-tecnico/debernardi.jpg", posicion: "Director Técnico" },
-    { id: 24, nombre: "Martín Coy", img: "/img/cuerpo-tecnico/coy.jpg", posicion: "Ayudante de Campo" },
-    { id: 25, nombre: "Belén Llompart", img: "/img/cuerpo-tecnico/llompart.jpg", posicion: "Kinesióloga" },
+    { id: 23, nombre: "José Luis Debernardi", img: "/img/DT.jpg", posicion: "Director Técnico" },
+    { id: 24, nombre: "Martín Coy", img: "/img/Coy.jpg", posicion: "Ayudante de Campo" },
+    { id: 25, nombre: "Belén Llompart", img: "/img/Belen.jpeg", posicion: "Kinesióloga" },
   ];
 
   const [seleccionado, setSeleccionado] = useState(jugadores[0]);

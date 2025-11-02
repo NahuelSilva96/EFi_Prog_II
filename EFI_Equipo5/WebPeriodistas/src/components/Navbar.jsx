@@ -52,7 +52,8 @@ function Navbar() {
             <section className="users-links desktop-only">
               <Button label="Hacete Socio" icon="pi pi-id-card" iconPos="left" className="btn-hacete-socio p-button-rounded" onClick={() => handleNavigate('/hacete-socio')} />
               <Button label="Socios" icon="pi pi-user" className="btn-socios" onClick={() => handleNavigate('/socios')} />
-              <Button label="Tienda" icon="pi pi-shopping-bag" className="btn-tienda" onClick={() => handleNavigate('/tienda')} />
+              <Button label="Tienda" icon="pi pi-shopping-bag" className="btn-tienda" 
+                  onClick={() => window.location.href = "/tienda"} />
             </section>
           </div>
           
@@ -75,7 +76,12 @@ function Navbar() {
               <section className='users-links'>
                 <Button label="Hacete Socio" icon="pi pi-id-card" iconPos="left" className="btn-hacete-socio p-button-rounded"  onClick={() => { navigate('/hacete-socio'); setMenuOpen(false); }} />
                 <Button label="Socios" icon="pi pi-user" className="btn-socios" onClick={() => { navigate('/socios'); setMenuOpen(false); }} />
-                <Button label="Tienda" icon="pi pi-shopping-bag" className="btn-tienda" onClick={() => { navigate('/tienda'); setMenuOpen(false); }} />
+                <Button
+                  label="Tienda"
+                  icon="pi pi-shopping-bag"
+                  className="btn-tienda"
+                  onClick={() => window.location.href = "/tienda"}
+                />
               </section>
             </div>
         )}

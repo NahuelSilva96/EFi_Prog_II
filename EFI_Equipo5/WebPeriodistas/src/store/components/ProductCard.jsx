@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../styles/store.css';
 import { Button } from 'primereact/button';
-import products from '../data/products';
 
 const ProductCard = ({ product, addToCart }) => {  
-  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState(null);
 
   if (!product) return null; 
 
   return (
       <div className="card">
-        <div className="image_container"onClick={() => navigate(`/tienda/product/${product.id}`)} style={{ cursor: 'pointer' }}>
+        <div className="image_container" style={{ cursor: 'pointer' }}>
           <img src={product.img} alt={product.name} />
         </div>
         <div className="title">
@@ -35,10 +32,13 @@ const ProductCard = ({ product, addToCart }) => {
           <div className="price">
             <span>{product.price}</span>
           </div>
-          <button className="cart-button" onClick={() => addToCart({ ...product, size: selectedSize})}>
+          <Button 
+          className="cart-button" 
+          onClick={(e) => addToCart({ ...product, size: selectedSize}, e.currentTarget.blur()) 
+          } >
             <i className='pi pi-shopping-cart'></i>
             <span>Add to cart</span>
-          </button>
+          </Button>
         </div>
       </div>
   );

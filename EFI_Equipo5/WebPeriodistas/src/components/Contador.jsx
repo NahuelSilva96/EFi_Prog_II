@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/contador.css";
 
 function ProximoPartido() {
-const targetDate = new Date("2025-10-25T15:30:00").getTime();
+const targetDate = new Date("2025-11-08T13:30:00").getTime();
 
 const [timeLeft, setTimeLeft] = useState({
 days: "00",

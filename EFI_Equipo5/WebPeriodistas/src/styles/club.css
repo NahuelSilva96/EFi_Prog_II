@@ -1,0 +1,135 @@
+:root {
+    --color-fondo: #0d0d0d;
+    --color-secundario: #ff5e00;
+    --color-texto: #f5f5f5;
+}
+
+.club-page {
+    font-family: "Jost", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+}
+
+.hero-club {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url("https://via.placeholder.com/1600x600") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: var(--color-blanco);
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    color: var(--color-blanco);
+}
+
+.historia-section {
+    padding: 80px 20px;
+    background-color: var(--color-fondo);
+}
+
+.historia-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.historia-texto {
+    flex: 1 1 400px;
+}
+
+.historia-texto h2 {
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+}
+
+.historia-texto p {
+    color: var(--color-blanco);
+    line-height: 1.6;
+}
+
+.historia-imagen {
+    flex: 1 1 400px;
+}
+
+.p-divider {
+    margin: 50px 0;
+}
+
+.p-divider .p-divider-content h2 {
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+    padding: 0 10px;
+}
+
+
+.timeline-section {
+    padding: 50px 20px;
+    background-color: var(--color-fondo);
+}
+
+.timeline-card {
+    background-color: var(--color-fondo) !important;
+    color: var(--color-blanco);
+    border-left: 4px solid var(--color-naranja);
+}
+
+.timeline-year {
+    color: var(--color-naranja);
+    font-weight: bold;
+}
+
+.comision-section {
+    padding: 60px 20px;
+    background: var(--color-fondo);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.comision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.miembro-card {
+    background: var(--color-fondo);
+    border: 1px solid var(--color-gris);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--color-blanco);
+}
+
+.miembro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px var(--color-naranja);
+}
+
+.miembro-avatar {
+    border: 3px solid var(--color-naranja);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+    font-size: 2rem;
+}
+
+.historia-container {
+    flex-direction: column;
+    align-items: center;
+}
+}

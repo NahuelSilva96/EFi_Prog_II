@@ -7,10 +7,8 @@ import Club from './pages/Club';
 import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
 import './styles/main.css';
-
-import Store from './pages/store/AppStore';
-
-        
+import Store from './store/AppStore';
+import { CartProvider } from './store/components/CartContext';
 
 function App() {
   const location = useLocation();
@@ -25,7 +23,11 @@ function App() {
           <Route path="/plantel" element={<Plantel />} />
           <Route path="/fixture" element={<Fixture />} />
           <Route path="/club" element={<Club />} />
-          <Route path="/tienda" element={<Store />} />
+          <Route path="/tienda/*" element={
+            <CartProvider>
+            <Store />
+            </CartProvider>
+          }/>
         </Routes>
         {!isStore &&  <Footer />}
     </div>

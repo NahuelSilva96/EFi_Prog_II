@@ -1,12 +1,131 @@
-# React + Vite
+# Club Periodistas FC - Sitio Web Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este proyecto es el desarrollo del **frontend** de la página web del club de fútbol **Periodistas FC** de la liga Profesionales Juniors de Río Cuarto.  
+La aplicación centraliza toda la información del club: noticias, fixture, socios, plantel y tienda online, permitiendo interacción con los usuarios mediante registro, comentarios y sorteos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Estructura del Proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+EFI-Equipo/
+├── Sitio/
+│ ├── index.html
+│ ├── CSS/
+│ ├── IMG/
+│ ├── public/
+│ └── src/
+│ ├── main.jsx
+│ ├── App.jsx
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ └── store/
+├── Manual de identidad.pdf
+└── presentación/
+
+---
+
+## Tecnologías Utilizadas
+
+- **Frontend:** React + Vite
+- **Framework CSS:** PrimeReact
+- **Estado global:** Context API (AppStore / CartContext)
+- **Hosting propuesto:** Hostinger (para futuro despliegue)
+- **Dominio:** periodistasfc-r4.com.ar (propuesta)
+- **Redes sociales:** Gmail, X, Instagram, TikTok, YouTube
+
+---
+
+## Funcionalidades Principales
+
+### Inicio
+
+- Carrusel de noticias principales
+- Daily Check para sorteos y promociones
+- Pie de página con sponsors y contacto
+
+### Noticias
+
+- Listado de noticias
+- Noticias anteriores con posibilidad de comentar
+
+### Club
+
+- Historia del club
+- Comisión Directiva
+
+### Plantel
+
+- Visualización de jugadores y cuerpo técnico
+- Tarjetas de detalle con información de cada jugador
+
+### Fixture
+
+- Tabla de posiciones
+- Próximos partidos
+
+### Socios
+
+- Registro y login de socios
+
+### Tienda
+
+- Listado de productos
+- Carrito de compras
+- Detalle de cada producto
+
+---
+
+## Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/NahuelSilva96/EFi_Prog_II.git
+
+
+Instalar dependencias:
+
+    npm install
+
+Ejecutar la aplicación en desarrollo:
+
+    npm run dev
+
+
+
+Equipo de Desarrollo
+
+Iván Daniel Escobar (Scrum Master)
+Encargado de la organización del proyecto y coordinación del equipo.
+
+Sergio Nahuel Silva (Product Manager)
+Gestión de objetivos y recursos para asegurar calidad en los resultados.
+
+Santiago Garay (Testing)
+Garantiza la calidad del software, encontrando errores antes de los usuarios.
+
+Sergio Matías Ibarra (Developer)
+Desarrollo y optimización de componentes y funcionalidades.
+
+Jonatan Villavicencio (Developer)
+Desarrollo creativo e innovación técnica en la aplicación.
+
+Futuras Mejoras
+
+Redirección a noticias completas al hacer clic en una noticia
+
+Estadísticas dinámicas de goles y asistencias por jugador
+
+Cuestionarios diarios y sorteos interactivos
+
+Predicción de resultados de partidos
+
+```
+
+Licencia
+
+Este proyecto es para fines educativos y de evaluación EFI - Programación II 2025.
+No se permite uso comercial sin autorización del autor.

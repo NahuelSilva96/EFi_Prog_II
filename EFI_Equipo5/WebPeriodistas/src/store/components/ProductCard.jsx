@@ -12,6 +12,7 @@ const ProductCard = ({ product, addToCart }) => {
         <div className="image_container" style={{ cursor: 'pointer' }}>
           <img src={product.img} alt={product.name} />
         </div>
+        <div className='detail-container'>
         <div className="title">
           <span>{product.name}</span>
         </div>
@@ -39,6 +40,7 @@ const ProductCard = ({ product, addToCart }) => {
             <i className='pi pi-shopping-cart'></i>
             <span>Add to cart</span>
           </Button>
+        </div>
         </div>
       </div>
   );

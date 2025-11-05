@@ -1,12 +1,18 @@
 .noticias-container {
-padding: 150px 450px;
-display: flex;
-flex-direction: column;
-justify-content: center;
+  padding: 150px 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
+.titulo-pag-noticias {
+  color: var(--color-naranja);
+  font-size: 50px;
+}
 .noti-card {
-  background-color: white;
+  background-color: #ffffffde;
   display: flex;
   margin: 50px 20px;
   border-radius: 10px;
@@ -20,9 +26,9 @@ justify-content: center;
 }
 
 .cabecera {
-  padding: 0 0 20px;
   width: 70%;
   font-size: 30px;
+  padding: 20px;
 }
 .cabecera img {
   width: 100%;
@@ -30,7 +36,7 @@ justify-content: center;
   max-height: 500px;
   object-fit: cover;
   object-position: 50% 40%;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px ;
   margin-bottom: 15px;
 }
 

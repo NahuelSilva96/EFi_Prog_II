@@ -29,8 +29,15 @@ const Store = () => {
       <div className='gift-card'>
         <img src="/img/giftcard.png" alt="" />
         <div className='compra-ahora'>
-        <span>Perfecta para cualquier ocasión, la Tarjeta Regalo oficial es el obsequio ideal que combina estilo y pasión.</span>
-        <Button className="button-text" label="Comprar Ahora" />
+          <span className='gift-text'>
+            Perfecta para cualquier ocasión, la Tarjeta Regalo oficial 
+            es el obsequio ideal que combina estilo y pasión.</span>
+          <Button 
+            className="btn-gift"
+            severity="secondary"
+            label="Comprar Ahora"
+            raised 
+          />
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
 
 function CarruselNoticias() { 
+    let navigate = useNavigate();
     const noticias = [
         { id: 1, titulo: "Goleada en la liga", descripcion: "El equipo gano 5 a 0", imagen: "/img/joni16.jpeg" },
         { id: 2, titulo: "Nuevo refuerzo", descripcion: "Se incorpora el delantero", imagen: "/img/charla.jpeg" },
@@ -34,7 +36,15 @@ function CarruselNoticias() {
                         ))}
                     </div>
                     <div className='mas-noticias'>
-                    <Button label='Mas Noticas' className='btn-hacete-socio' icon='pi pi-chevron-right' />
+                    <Button
+                    label='Mas Noticas'
+                    className='btn-hacete-socio'
+                    icon='pi pi-chevron-right'
+                    onClick={(e) => {
+                        navigate('/noticias'); 
+                        e.currentTarget.blur();
+                        }} 
+                    />
                     </div>
                 </div>
             </div>

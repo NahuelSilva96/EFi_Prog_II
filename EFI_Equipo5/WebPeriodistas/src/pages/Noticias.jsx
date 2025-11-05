@@ -15,6 +15,7 @@ function Noticias() {
   
   return (
           <div className="noticias-container">
+            <h1 className="titulo-pag-noticias">NOTICIAS</h1>
             {noticias.map((n) => (
             <NoticiaCard 
             key={n.id}

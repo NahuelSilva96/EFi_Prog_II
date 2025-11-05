@@ -6,6 +6,7 @@ import Noticias from './pages/Noticias';
 import Club from './pages/Club';
 import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
+import Club from './pages/Equipo';
 import './styles/main.css';
 import Store from './store/AppStore';
 import { CartProvider } from './store/components/CartContext';

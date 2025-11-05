@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Noticias from './pages/Noticias';
 import Plantel from './pages/Plantel';
 import Fixture from './pages/Fixture';
+import Club from './pages/Equipo';
 import './styles/main.css';
 
 import Store from './pages/store/AppStore';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/plantel" element={<Plantel />} />
           <Route path="/fixture" element={<Fixture />} />
           <Route path="/tienda" element={<Store />} />
+          <Route path="/club" element={<Club />} />
         </Routes>
         {!isStore &&  <Footer />}
     </div>

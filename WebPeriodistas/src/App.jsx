@@ -20,7 +20,7 @@ function App() {
     <div className="fondo">
       { !isStore && <Navbar />}  
 
-      {location.pathname !== "/" && !isStore && <div style={{ height: '165px', backgroundColor: 'black' }}></div>}
+      {location.pathname !== "/" && !isStore && <div className='nav-fondo'></div>}
       <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/noticias" element={<Noticias />} />

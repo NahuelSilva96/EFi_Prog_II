@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "primereact/button";
 import "../styles/haceteSocio.css"; 
 
 function HaceteSocio() {
@@ -72,6 +73,8 @@ function HaceteSocio() {
         />
 
         <button type="submit" className="submit-button">Asociarme</button>
+        <p style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, fontSize: 20}}>Si ya estas registrado <Button label="Iniciar Sesion" text severity="warning" style={{ padding: 10 }}/></p>
+
       </form>
       {mensaje && (
         <p className={mensaje.includes("exitoso") ? "mensaje-exito" : "mensaje-error"}>

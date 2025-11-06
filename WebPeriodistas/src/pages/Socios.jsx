@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "primereact/button";
 import "../styles/haceteSocio.css";
 
 function Socios() {
@@ -50,6 +51,9 @@ function Socios() {
           />
 
           <button type="submit" className="submit-button">Iniciar Sesión</button>
+          
+          <p style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, fontSize: 20}}>Aun no sos socio! <Button label="Registrarte" text severity="warning" style={{ padding: 10 }}/></p>
+          
         </form>
 
         {mensaje && (

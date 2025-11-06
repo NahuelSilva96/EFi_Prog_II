@@ -1,0 +1,43 @@
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.contador_title {
+  font-size: 28px;
+  color: #fff;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.contador_clock {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contador_clock-item {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+
+.contador_value {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contador_count-label {
+  font-size: 17px;
+  color: #ccc;
+}
+

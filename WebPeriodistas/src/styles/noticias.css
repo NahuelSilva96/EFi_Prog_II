@@ -1,0 +1,135 @@
+.noticias-container {
+  padding: 150px 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.titulo-pag-noticias {
+  color: var(--color-naranja);
+  font-size: 50px;
+}
+.noti-card {
+  background-color: #ffffffde;
+  display: flex;
+  margin: 50px 20px;
+  border-radius: 10px;
+}
+
+.comentarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.cabecera {
+  width: 70%;
+  font-size: 30px;
+  padding: 20px;
+}
+.cabecera img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 10px ;
+  margin-bottom: 15px;
+}
+
+.cabecera h3, .cabecera h5, .cabecera p, .btn-ver {
+  margin: 0 30px;
+}
+.dia {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.contenido {
+  max-height: 300px;
+}
+
+.subtitulo {
+  padding: 20px 0;
+}
+
+.nota {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.nota.expandido {
+  max-height: 2000px;
+}
+
+.btn-ver {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+}
+
+.botonera {
+  display: flex;
+  padding: 0 0 15px;
+  justify-content: space-around;
+}
+.btn-ico {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .noticias-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+  .titulo-pag-noticias {
+    color: var(--color-naranja);
+    font-size: 50px;
+  }
+  .noti-card {
+    flex-direction: column;
+  }
+
+  .comentarios {
+    flex-direction: column;
+  }
+
+  .cabecera {
+    width: 100%;
+    font-size: 20px;
+  }
+  .cabecera img {
+    height: 250px;
+  }
+
+  .cabecera h3, .cabecera h5, .cabecera p, .btn-ver{
+    margin: 0 20px;
+  }
+
+  .contenido {
+    max-height: 200px;
+  }
+
+  .subtitulo {
+    padding: 15px 0;
+  }
+
+  .nota {
+    max-height: 200px;
+  }
+
+  .botonera {
+    justify-content: end;
+    gap: 30px;
+  }
+}

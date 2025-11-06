@@ -1,0 +1,255 @@
+.desktop-only { 
+  display: flex;
+  width: 2000px;
+  gap: 20px;
+  align-items: center;
+}
+.mobile-only { 
+  display: none;
+}
+
+.nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    background: linear-gradient(
+        180deg,
+        #1D1D1D 0%,
+        rgba(29, 29, 27, 0) 100%
+    );
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: var(--color-blanco-gris);
+    font-size: 25px;
+    padding-top:40px;    
+}
+
+.nav.scrolled {
+  background: var(--color-gris-oscuro);
+  transition: background 0.4s ease, padding-top 0.4s ease;
+  padding-top: 10px;
+  height: 115px;
+}
+
+.logo-nav {
+  height: 125px;
+  transition: height 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-nav:hover {
+  transform: scale(1.1); 
+}
+
+.nav.scrolled .logo-nav {
+  height: 65px; 
+  transition: height 0.3s ease;
+}
+
+.btn-hacete-socio, .btn-socios, .btn-tienda {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.logo {
+    margin: 0;
+    display: block;
+    margin-top: 60px;
+    height: 125px;
+    width: 100px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex;
+    width: 70%;
+    margin-top: 0;
+    list-style: none;
+    margin-left: 60px;
+    gap: 60px;
+}
+.logo-nav{
+    max-height: 85px;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+}
+
+.nav-item{
+    margin: 0 20px 0 20px;
+}
+
+.nav-menu .nav-item {
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-menu .nav-item:hover {
+  transform: scale(1.06);
+  color: var(--color-blanco); 
+}
+
+.users-links {
+    width: 30%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: nowrap;
+    color: var(--color-blanco)
+}
+
+.btn-hacete-socio {
+  height: 45px;
+  width: 150px;
+  font-size: 14px;
+  display: flex;
+  background-color: var(--color-naranja); 
+  color: var(--color-blanco);
+  border: none;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.btn-hacete-socio:hover {
+  background-color: var(--color-naranja-hover);
+}
+
+.btn-socios {
+  height: 45px;
+  width: 150px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-blanco);
+  border: 2px solid var(--color-naranja);
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.btn-socios:hover {
+  background-color: var(--color-naranja-hover);
+  border: none;
+}
+
+.btn-tienda {
+  height: 45px;
+  width: 150px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: rgb(231, 225, 212);
+  border: none;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.btn-tienda:hover {
+  background-color: var(--color-naranja-hover);
+}
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-gris-oscuro);
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    
+  }
+
+  .hamburger {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-blanco);
+    border-radius: 2px;
+  }
+  
+  .nav {
+    background: var(--color-gris-oscuro);
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px;
+    height: 90px;
+    font-size: 20px;
+  }
+
+  .logo {
+    margin-top: 50px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: end;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+  
+  .logo-nav{
+      max-height: 70px;
+      margin: 0 20px 0 20px;
+  }
+
+  .nav-item{
+      margin: 0;
+  }
+
+  .users-links {
+      width: 80%;
+      margin: 130px 50px;
+  }
+
+
+
+  .btn-tienda {
+    border: 2px solid var(--color-naranja);
+  }
+
+  .btn-tienda:hover {
+    border: none;
+  }
+  .nav.scrolled {
+    background: var(--color-gris-oscuro); /* o el color que quieras fijo */
+    padding-top: 40px;
+    height: 125px;
+  }
+
+  .nav.scrolled .logo-nav {
+    height: 85px;
+  }
+
+  .btn-hacete-socio {
+    font-size: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .btn-socios{
+    font-size: 10px;
+  }
+  .btn-tienda {
+    font-size: 10px;
+  }
+}
+
+ 

@@ -1,0 +1,54 @@
+import React from 'react';
+import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
+
+function CarruselNoticias() { 
+    let navigate = useNavigate();
+    const noticias = [
+        { id: 1, titulo: "Goleada en la liga", descripcion: "El equipo gano 5 a 0", imagen: "/img/joni16.jpeg", fecha: 'Sábado 1 de noviembre de 2025'},
+        { id: 2, titulo: "Nuevo refuerzo", descripcion: "Se incorpora el delantero", imagen: "/img/charla.jpeg", fecha:'Sábado 25 de octubre de 2025' },
+        { id: 3, titulo: "Partido Suspendido", descripcion: "El equipo disputara una fecha suspendida esta semana", imagen: "/img/charla1.jpeg", fecha:'Sábado 25 de octubre de 2025' },
+        { id: 4, titulo: "Victoria en penales", descripcion: "Triunfo emocionante tras tanda de penales", imagen: "/img/charla2.jpeg", fecha:'Sábado 11 de octubre de 2025' },
+        { id: 5, titulo: "Final furioso", descripcion: "Se jugo, se raspo y casi se van a las mano", imagen: "/img/tecnico.jpeg", fecha:'Sábado 4 de octubre de 2025' }
+        
+        ];
+    
+    const responsiveOptions = [
+        { breakpoint: '1400px', numVisible: 3, numScroll: 1 },
+        { breakpoint: '1199px', numVisible: 3, numScroll: 1 },
+        { breakpoint: '767px', numVisible: 2, numScroll: 1 },
+        { breakpoint: '575px', numVisible: 1, numScroll: 1 }
+    ];
+
+        return(
+            <div>
+                <div className="noticias-carrusel-constante">
+                    <h2 className='titulo-noticias'>Noticias</h2>
+                    <div className="noticias-track">
+                        {[...noticias, ...noticias].map((noticia, index) => (
+                            <div className="card_noticias" key={index}>
+                                <img src={noticia.imagen} alt={noticia.titulo} />
+                                <div className="card_noticias_content">
+                                    <p className="card_noticias_title">{noticia.titulo}</p>
+                                    <p className="card_noticias_description">{noticia.descripcion}</p>
+                                    <p className="card_noticias_description">{noticia.fecha}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className='mas-noticias'>
+                    <Button
+                    label='Mas Noticas'
+                    className='btn-hacete-socio'
+                    icon='pi pi-chevron-right'
+                    onClick={(e) => {
+                        navigate('/noticias'); 
+                        e.currentTarget.blur();
+                        }} 
+                    />
+                    </div>
+                </div>
+            </div>
+            );
+}
+export default CarruselNoticias

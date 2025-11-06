@@ -17,6 +17,8 @@ function App() {
   return (
     <div className="fondo">
       { !isStore && <Navbar />}  
+
+      {location.pathname !== "/" && !isStore && <div style={{ height: '165px', backgroundColor: 'black' }}></div>}
       <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/noticias" element={<Noticias />} />
@@ -29,7 +31,7 @@ function App() {
             </CartProvider>
           }/>
         </Routes>
-        {!isStore &&  <Footer />}
+      <Footer />
     </div>
   );
 }

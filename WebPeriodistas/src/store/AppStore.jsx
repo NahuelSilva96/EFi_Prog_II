@@ -1,7 +1,6 @@
 import React from 'react';
 import StoreNav from './components/StoreNav';
 import ProductDetail from './components/ProductDetail';
-import StoreFooter from './components/StoreFooter';
 import Store from './pages/Store';
 import { Route, Routes } from 'react-router-dom';
 import './styles/store.css';
@@ -14,7 +13,6 @@ function AppStore() {
           <Route path="" element={<Store />} />
           <Route path="product/:id" element={<ProductDetail />} />
         </Routes>
-        <StoreFooter />
       </div>
   );
 }

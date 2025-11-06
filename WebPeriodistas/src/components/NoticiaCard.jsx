@@ -63,7 +63,7 @@ function NoticiaCard({ titulo, descripcion, imagen }) {
                 value={nuevoComentario}
                 onChange={(e) => setNuevoComentario(e.target.value)}
                 placeholder="Escribe un comentario..."
-                style={{ width: "100%", marginBottom: "10px" }}
+                style={{ width: "100%", marginBottom: "10px", padding: '10px'}}
             />
             <div className="botonera">
                 <div className="btn-ico">
@@ -72,6 +72,7 @@ function NoticiaCard({ titulo, descripcion, imagen }) {
                         icon="pi pi-heart"
                         className="p-button-text"
                         onClick={() => setLikes(likes + 1)}
+                        style={{color: 'red'}}
                     />
                     <span>{likes} Likes</span>
                 </div>

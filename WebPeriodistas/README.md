@@ -10,7 +10,7 @@ La aplicación centraliza toda la información del club: noticias, fixture, soci
 ## Estructura del Proyecto
 
 EFI-Equipo/
-├── Sitio/
+├── WebPeriodistas/
 │ ├── index.html
 │ ├── CSS/
 │ ├── IMG/
@@ -33,7 +33,7 @@ EFI-Equipo/
 - **Framework CSS:** PrimeReact
 - **Estado global:** Context API (AppStore / CartContext)
 - **Hosting propuesto:** Hostinger (para futuro despliegue)
-- **Dominio:** periodistasfc-r4.com.ar (propuesta)
+- **Dominio porpuesto:** periodistasfc-r4.com.ar (propuesta)
 - **Redes sociales:** Gmail, X, Instagram, TikTok, YouTube
 
 ---
@@ -98,20 +98,12 @@ Ejecutar la aplicación en desarrollo:
 
 Equipo de Desarrollo
 
-Iván Daniel Escobar (Scrum Master)
-Encargado de la organización del proyecto y coordinación del equipo.
+Iván Daniel Escobar
+Sergio Nahuel Silva
+Santiago Garay
+Sergio Matías Ibarra
+Jonatan Villavicencio
 
-Sergio Nahuel Silva (Product Manager)
-Gestión de objetivos y recursos para asegurar calidad en los resultados.
-
-Santiago Garay (Testing)
-Garantiza la calidad del software, encontrando errores antes de los usuarios.
-
-Sergio Matías Ibarra (Developer)
-Desarrollo y optimización de componentes y funcionalidades.
-
-Jonatan Villavicencio (Developer)
-Desarrollo creativo e innovación técnica en la aplicación.
 
 Futuras Mejoras
 

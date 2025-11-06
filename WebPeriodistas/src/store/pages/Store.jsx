@@ -9,7 +9,7 @@ const Store = () => {
   const { addToCart } = useCart();
 
   return (
-    <div>
+    <div className='cuerpo'>
       {/* Banner principal */}
       <div className='foto-equipo'>
         <img src="./img/equiporecor.png" alt="equipo de periodistas" />

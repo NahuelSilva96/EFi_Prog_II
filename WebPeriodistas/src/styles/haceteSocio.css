@@ -71,7 +71,7 @@
     padding: 20px 100px ;
     color: #eee;
     background-color: #222; 
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
     text-align: center;
     font-size: 27px;

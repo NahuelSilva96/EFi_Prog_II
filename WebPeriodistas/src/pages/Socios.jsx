@@ -52,7 +52,7 @@ function Socios() {
 
           <button type="submit" className="submit-button">Iniciar Sesión</button>
           
-          <p style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, fontSize: 20}}>Aun no sos socio! <Button label="Registrarte" text severity="warning" style={{ padding: 10 }}/></p>
+          <p style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10,flexWrap: 'wrap', fontSize: 20}}>Aun no sos socio! <Button label="Registrarse" text severity="warning" style={{ padding: 10 }}/></p>
           
         </form>
 

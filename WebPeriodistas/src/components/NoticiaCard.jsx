@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "primereact/button";
 import { InputTextarea } from "primereact/inputtextarea";
 
-function NoticiaCard({ titulo, descripcion, imagen }) {
+function NoticiaCard({ titulo, descripcion, imagen, fecha }) {
   const [likes, setLikes] = useState(0);
   const [comentarios, setComentarios] = useState([]);
   const [nuevoComentario, setNuevoComentario] = useState("");
@@ -22,6 +22,7 @@ function NoticiaCard({ titulo, descripcion, imagen }) {
                 alt={titulo}
                 className="imagen-noticia"
             />
+            <p className="dia">{fecha}</p>
             <h3>{titulo}</h3>
             <div className="contenido">
                 <h5 className="subtitulo">{descripcion}</h5>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/socios.css";
+import "../styles/haceteSocio.css";
 
 function Socios() {
   const [formData, setFormData] = useState({
@@ -23,9 +23,9 @@ function Socios() {
 
   return (
     <div className="page-wrapper"> 
-      <div className="socios-container">
+      <div className="s-container">
         
-        <form onSubmit={handleLogin} className="socios-form">
+        <form onSubmit={handleLogin} className="s-form">
           <h2>Bienvenido Socio</h2>
           <label htmlFor="email">Email:</label>
           <input

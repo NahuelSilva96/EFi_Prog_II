@@ -35,9 +35,9 @@ function HaceteSocio() {
   };
 
   return (
-    <div className="hs-container">
+    <div className="s-container">
       <h1>Asóciate</h1>
-      <form onSubmit={handleSubmit} className="hs-form">
+      <form onSubmit={handleSubmit} className="s-form">
         <label htmlFor="nombre">Nombre:</label>
         <input
           type="text"

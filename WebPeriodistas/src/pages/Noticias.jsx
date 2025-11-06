@@ -30,3 +30,4 @@ function Noticias() {
 }
 
 export default Noticias;
+

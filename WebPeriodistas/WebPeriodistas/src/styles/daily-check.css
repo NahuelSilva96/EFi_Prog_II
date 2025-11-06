@@ -1,0 +1,64 @@
+.positions {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.positions .top p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.teams-table {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s;
+}
+
+.team:last-child {
+  border-bottom: none;
+}
+
+.team:hover {
+  background: #111;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.position {
+  font-weight: bold;
+  width: 25px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 14px;
+}
+
+.points {
+  font-weight: bold;
+}
+
+.highlight {
+  background: #1a1a1a;
+  border-left: 4px solid #ff5e00;
+}

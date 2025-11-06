@@ -8,10 +8,24 @@ import "../styles/club.css";
 
 export default function Club() {
     const eventos = [
-        { year: "2010", title: "Fundación", text: "Se funda el club y se inaugura la primera cancha." },
-        { year: "2015", title: "Primer campeonato", text: "El club obtiene su primer título regional." },
-        { year: "2020", title: "Nueva sede", text: "Se inaugura la sede social con instalaciones modernas." },
-        { year: "2025", title: "Modernización", text: "Renovación del estadio y expansión institucional." },
+        {
+            year: "2015",
+            img: "/img/logo.png",
+            title: "Fundación",
+            text: "Se funda el club. Tras años de pensar en crear un equipo competitivo donde el buen juego y la diversión no pueden faltar."
+        },
+        {
+            year: "2023",
+            img: "/img/copa.jpg",
+            title: "Primer campeonato",
+            text: "El club obtiene su primer título."
+        },
+        {
+            year: "2024",
+            img: "/img/descenso.jpg",
+            title: "Descenso",
+            text: "Tras una campaña lamentable, el club se va al descenso."
+        },
     ];
 
     const comision = [
@@ -21,75 +35,102 @@ export default function Club() {
         { nombre: "Lucía Gómez", cargo: "Tesorera", foto: "https://via.placeholder.com/150" },
     ];
 
+    const customizedMarker = (item) => (
+        <span className="timeline-marker"></span>
+    );
+
+    const customizedContent = (item) => (
+        <Card className="timeline-card">
+            <div className="timeline-content">
+                <div className="timeline-img">
+                    <Image src={item.img} alt={item.title} imageStyle={{ borderRadius: "10px", width: "100%" }} preview />
+                </div>
+                <div className="timeline-text">
+                    <h3>{item.title}</h3>
+                    <h4>{item.year}</h4>
+                    <p>{item.text}</p>
+                </div>
+            </div>
+        </Card>
+    );
+
     return (
-    <div className="club-page">
-        {/* Hero / Portada */}
-        <section className="hero-club">
-        <div className="hero-overlay">
-            <img src="/img/fondo.png" alt="Fondo" className="fondo" />
-            <h1>Historia del Club</h1>
-            <p>Pasión, esfuerzo y comunidad desde nuestros orígenes.</p>
+        <div className="club-page">
+            {/* Hero / Portada */}
+            <section className="hero-club">
+                <div className="hero-overlay">
+                    <h1>Historia del Club</h1>
+                    <p>Pasión, esfuerzo y comunidad desde nuestros orígenes.</p>
+                </div>
+            </section>
+
+            {/* Historia */}
+            <section className="historia-section">
+                <div className="historia-container">
+                    <div className="historia-texto">
+                        <h2>Nuestros orígenes</h2>
+                        <p>
+                            El Club fue fundado en 2010 por un grupo de vecinos apasionados por el deporte. 
+                            Con esfuerzo y compromiso, levantaron la primera cancha en terrenos cedidos por la comunidad.
+                        </p>
+                        <p>
+                            A lo largo de los años, el club se consolidó como un espacio de encuentro, con logros deportivos 
+                            y una profunda conexión con su gente.
+                        </p>
+                    </div>
+                    <div className="historia-imagen">
+                        <Image
+                            src="../img/hinchas.png"
+                            alt="Foto histórica"
+                            preview
+                            imageStyle={{ borderRadius: "10px", width: "100%" }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <Divider align="center">
+                <h2>Momentos destacados</h2>
+            </Divider>
+
+            {/* Línea de tiempo */}
+            <section className="timeline-section">
+                {eventos.map((item, i) => (
+                <div className="timeline-item" key={i}>
+                    <div className="timeline-marker">{item.year}</div>
+                    <div className="timeline-card">
+                        <div className="timeline-img">
+                            <img src={item.img} alt={item.title} />
+                        </div>
+                        <div className="timeline-text">
+                            <h3>{item.title}</h3>
+                            <p>{item.text}</p>
+                        </div>
+                    </div>
+                </div>
+                ))}
+            </section>
+
+            <Divider align="center">
+                <h2>Comisión Directiva</h2>
+            </Divider>
+
+            {/* Comisión directiva */}
+            <section className="comision-section">
+                <div className="comision-grid">
+                    {comision.map((m, i) => (
+                        <Card key={i} className="miembro-card" footer={<p>{m.cargo}</p>}>
+                            <Avatar
+                                image={m.foto}
+                                size="xlarge"
+                                shape="circle"
+                                className="miembro-avatar"
+                            />
+                            <h3>{m.nombre}</h3>
+                        </Card>
+                    ))}
+                </div>
+            </section>
         </div>
-        </section>
-
-        {/* Historia */}
-        <section className="historia-section">
-        <div className="historia-container">
-            <div className="historia-texto">
-            <h2>Nuestros orígenes</h2>
-            <p>El Club fue fundado en 2010 por un grupo de vecinos apasionados por el deporte. 
-                Con esfuerzo y compromiso, levantaron la primera cancha en terrenos cedidos por la comunidad.
-            </p>
-            <p>A lo largo de los años, el club se consolidó como un espacio de encuentro, con logros deportivos 
-                y una profunda conexión con su gente.
-            </p>
-            </div>
-            <div className="historia-imagen">
-            <Image
-                src="../img/hinchas.png"
-                alt="Foto histórica"
-                preview
-                imageStyle={{ borderRadius: "10px", width: "100%" }}
-            />
-            </div>
-        </div>
-        </section>
-
-        <Divider align="center">
-            <h2>Momentos destacados</h2>
-        </Divider>
-
-        {/* Línea de tiempo */}
-        <section className="timeline-section">
-        <Timeline
-            value={eventos}
-            opposite={(item) => <small className="timeline-year">{item.year}</small>}
-            content={(item) => (
-            <Card title={item.title} subTitle={item.text} className="timeline-card"></Card>
-            )}
-        />
-        </section>
-
-        <Divider align="center">
-            <h2>Comisión Directiva</h2>
-        </Divider>
-
-        {/* Comisión directiva */}
-        <section className="comision-section">
-            <div className="comision-grid">
-            {comision.map((m, i) => (
-            <Card key={i} className="miembro-card" footer={<p>{m.cargo}</p>}>
-                <Avatar
-                image={m.foto}
-                size="xlarge"
-                shape="circle"
-                className="miembro-avatar"
-            />
-                <h3>{m.nombre}</h3>
-                </Card>
-            ))}
-            </div>
-        </section>
-    </div>
     );
 }
